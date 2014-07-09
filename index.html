@@ -1,0 +1,96 @@
+<html>
+
+<head>
+	<title>Mysql Viewer</title>
+	<link rel='stylesheet' href='main.css' />
+	<style>
+		body {
+		}
+		.inputs {
+			background: #D6CED9;
+			width: 40%;
+			padding: 20px;
+			border-radius: 5px;
+			margin: 40px;
+			margin-left: 30%;
+		}
+		.inputs table tr td{
+			font-weight: 600;
+
+		}
+		.sep {
+			border-bottom: 1 px solid grey;
+			width: 100%;
+		}
+		h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js" ></script>
+	<h1>MySimple</h1>
+	<div class="connection" style="margin-left: 25%;background: grey;border-radius: 5px; padding: 10px; width: 60%;">
+		<input type="text" placeholder="Location" id="loc"/>
+		<input type="text" placeholder="Database" id="data"/>
+		<input type="text" placeholder="User" id="user"/>
+		<input type="password" placeholder="password" id="pass"/>
+		<button id="con">Connect</button>
+		<button id="dis">Disconnect</button></div>
+	<div class="inputs" >
+	<table>
+	<tr>
+		<td>
+			Table:
+		</td>
+		<td> 
+			<select id="table">
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Search Field: 
+		</td>
+		<td>
+			<select id="field">
+			</select>
+		</td>
+		<td>
+			<input type="text" placeholder="Search..." id="text" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Sort By: 
+		</td>
+		<td>
+			<select id="sort">
+			</select>
+		</td>
+		<td>
+			<select id="cending">
+				<option value="ASC">Ascending</option>
+				<option value="DESC">Descending</option>
+			</select>
+			Instant: 
+			<select id="instant">
+				<option value="on">Yes</option>
+				<option value="off">No</option>
+			</select>
+		</td>
+	</tr>
+</table>
+			<div style="text-align: center;">
+				<span style="font-weight: 600;">Limit:</span>&emsp;
+				<input typ="number" placeholder="Limit" value="10" id="limit"/><br>
+				<button id="submit">Submit</button>
+				<button id="clear">Clear</button>
+			</div>
+	</div>
+	<div class="info" style="border: 1px solid grey;border-radius: 5px;padding: 10px;margin: 40px;">
+	</div>
+</body>
+</html>

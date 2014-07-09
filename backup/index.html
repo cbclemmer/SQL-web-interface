@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>Mysql testing</title>
+<link rel='stylesheet' href='main.css'/>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js" ></script>
+	<div class="inputs" style="margin: 40px;">
+	<input type="text" placeholder="Search..." id="text" />&emsp;
+	Table: 
+	<select id="table">
+		<option value="tblCustomer">Clients</option>
+		<option value="tblCustomerSites">Sites</option>
+		<option value="tblExtinguisher">Extinquishers</option>
+		<option value="tblSiteExtinguishers">Site Extinquishers</option>
+		<option value="tblInspectionRecord">Inspection</option>
+		<option value="tblVisitRecord">Visit</option>
+		<option value="tlkpChemicalTypes">Chemicals</option>
+	</select>
+	Field: 
+	<select id="field">
+		<option value="">None</option>
+		<option value="CustomerID">Customer ID</option>
+		<option vlaue="CustSiteID">Site ID</option>
+		<option value="ExtinguisherID">Extinquisher ID</option>
+		<option value="SiteExtID">Site Ext ID</option>
+		<option value="InspectionID">Inspection ID</option>
+	</select>
+	Limit: 
+	<input typ="number" placeholder="Limit" value="10" id="limit"/>
+	<button id="submit">Submit</button>
+	<button id="clear">Clear</button>
+	</div>
+	<div class="info" style="border: 1px solid grey;border-radius: 5px;padding: 10px;margin: 40px;">
+	</div>
+</body>
+</html>

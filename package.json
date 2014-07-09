@@ -1,0 +1,16 @@
+{
+  "name": "MySimple",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm install;node app.js"
+  },
+  "author": "Colton Clemmer",
+  "license": "BSD",
+  "dependencies": {
+    "mysql": "~2.3.2",
+    "express": "~4.5.1",
+    "socket.io": "~1.0.6"
+  }
+}
